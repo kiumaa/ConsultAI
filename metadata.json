@@ -1,0 +1,7 @@
+{
+  "name": "ConsultAI",
+  "description": "Your personal AI business consultant, ready to help you strategize and succeed through real-time voice conversations.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

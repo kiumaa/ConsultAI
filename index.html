@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConsultAI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes listening-pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(22, 163, 175, 0.7), 0 0 0 0 rgba(22, 163, 175, 0.7); }
+        50% { box-shadow: 0 0 0 20px rgba(22, 163, 175, 0), 0 0 0 40px rgba(22, 163, 175, 0); }
+      }
+      .animate-listening {
+        animation: listening-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+      }
+      
+      @keyframes speaking-wave {
+        from { transform: scale(0.8); opacity: 1; }
+        to { transform: scale(1.5); opacity: 0; }
+      }
+      .speaking-wave {
+        position: absolute;
+        border: 2px solid #06b6d4;
+        border-radius: 50%;
+        animation: speaking-wave 1.5s infinite;
+      }
+
+      @keyframes thinking-orbit {
+        0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+      }
+      .thinking-dot {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #67e8f9;
+        border-radius: 50%;
+        animation: thinking-orbit 2s linear infinite;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-950 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
