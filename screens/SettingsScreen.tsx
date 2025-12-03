@@ -58,7 +58,7 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({ onBack }) => {
         <button onClick={onBack} className="p-2 -ml-2 text-gray-300">
           <BackIcon />
         </button>
-        <h1 className="text-xl font-bold text-white mx-auto pr-8">Settings</h1>
+        <h1 className="text-xl font-bold text-white mx-auto pr-8">Configurações</h1>
       </header>
 
       <main className="flex-grow overflow-y-auto pb-8">
@@ -73,47 +73,47 @@ const SettingsScreen: React.FC<SettingsScreenProps> = ({ onBack }) => {
             <button className="ml-auto p-2 text-gray-400"><EditIcon className="w-5 h-5" /></button>
         </div>
 
-        <SectionTitle>Account</SectionTitle>
+        <SectionTitle>Conta</SectionTitle>
         <div className="mx-4 rounded-lg overflow-hidden">
-            <NavItem label="Change Password" icon={LockIcon} />
-            <NavItem label="Manage Subscription" icon={SubscriptionIcon} value="Pro Plan" />
+            <NavItem label="Alterar Senha" icon={LockIcon} />
+            <NavItem label="Gerenciar Assinatura" icon={SubscriptionIcon} value="Plano Pro" />
         </div>
 
-        <SectionTitle>Preferences</SectionTitle>
+        <SectionTitle>Preferências</SectionTitle>
         <div className="mx-4 rounded-lg overflow-hidden">
-            <ToggleItem label="Push Notifications" icon={BellIcon} enabled={true} />
+            <ToggleItem label="Notificações Push" icon={BellIcon} enabled={true} />
             <div className="border-b border-slate-700/50">
-              <NavItem label="App Theme" icon={MoonIcon} value="Dark" />
+              <NavItem label="Tema do App" icon={MoonIcon} value="Escuro" />
             </div>
-            <NavItem label="Voice & Language" icon={MicIcon} />
+            <NavItem label="Voz & Idioma" icon={MicIcon} />
         </div>
         
-        <SectionTitle>Privacy & Data Control</SectionTitle>
+        <SectionTitle>Privacidade & Dados</SectionTitle>
         <div className="mx-4 rounded-lg overflow-hidden">
-            <ToggleItem label="Save Conversation History" icon={LockIcon} enabled={false} />
+            <ToggleItem label="Salvar Histórico de Conversas" icon={LockIcon} enabled={false} />
             <div className="border-b border-slate-700/50">
-                <ToggleItem label="Anonymize My Usage Data" icon={PrivacyIcon} enabled={true} description="This helps improve our AI models while protecting your privacy." />
+                <ToggleItem label="Anonimizar Meus Dados" icon={PrivacyIcon} enabled={true} description="Isso ajuda a melhorar nossos modelos de IA protegendo sua privacidade." />
             </div>
-            <NavItem label="Export My Data" icon={ExportIcon} />
+            <NavItem label="Exportar Meus Dados" icon={ExportIcon} />
         </div>
 
-        <SectionTitle>Support & Legal</SectionTitle>
+        <SectionTitle>Suporte & Legal</SectionTitle>
         <div className="mx-4 rounded-lg overflow-hidden">
-            <NavItem label="Help Center" icon={HelpIcon} />
+            <NavItem label="Central de Ajuda" icon={HelpIcon} />
             <div className="border-b border-slate-700/50">
-                <NavItem label="Privacy Policy" icon={PrivacyIcon} />
+                <NavItem label="Política de Privacidade" icon={PrivacyIcon} />
             </div>
-            <NavItem label="Terms of Service" icon={TermsIcon} />
+            <NavItem label="Termos de Serviço" icon={TermsIcon} />
         </div>
         
         <div className="px-4 mt-8">
             <button className="w-full text-center text-red-400 py-3 bg-red-500/10 rounded-lg">
-                Delete My Account & Data
+                Excluir Minha Conta & Dados
             </button>
         </div>
         
         <p className="text-center text-xs text-gray-500 mt-8">
-            ConsultAI Version 1.0.0
+            ConsultAI Versão 1.0.0
         </p>
       </main>
     </div>

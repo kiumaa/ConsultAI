@@ -9,21 +9,21 @@ interface JournalScreenProps {
 const journalEntries = [
   {
     icon: MarketingIcon,
-    title: 'Marketing Strategy Q3',
-    date: 'Yesterday',
-    snippet: 'Key takeaways included implementing a loyalty program...',
+    title: 'Estratégia de Marketing T3',
+    date: 'Ontem',
+    snippet: 'Principais conclusões incluíram a implementação de um programa de fidelidade...',
   },
   {
     icon: () => <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>,
-    title: 'Improving Customer Retention',
-    date: '2 days ago',
-    snippet: 'We discussed the importance of post-purchase follow-ups and...',
+    title: 'Melhorando a Retenção de Clientes',
+    date: '2 dias atrás',
+    snippet: 'Discutimos a importância do acompanhamento pós-compra e...',
   },
   {
     icon: FinanceIcon,
-    title: 'Startup Funding Options',
-    date: '5 days ago',
-    snippet: 'Explored the pros and cons of venture capital versus angel...',
+    title: 'Opções de Financiamento para Startup',
+    date: '5 dias atrás',
+    snippet: 'Explorei os prós e contras de capital de risco versus investidor anjo...',
   },
 ];
 
@@ -34,15 +34,15 @@ const JournalScreen: React.FC<JournalScreenProps> = ({ onBack }) => {
         <button onClick={onBack} className="p-2 -ml-2 text-gray-300">
           <BackIcon />
         </button>
-        <h1 className="text-xl font-bold text-white mx-auto">Business Journal</h1>
-        <button className="p-2 -mr-2 text-gray-300 font-semibold">Edit</button>
+        <h1 className="text-xl font-bold text-white mx-auto">Diário de Negócios</h1>
+        <button className="p-2 -mr-2 text-gray-300 font-semibold">Editar</button>
       </header>
 
       <div className="p-4">
         <div className="relative">
           <input
             type="text"
-            placeholder="Search by topic, keyword, or date"
+            placeholder="Buscar por tópico, palavra-chave ou data"
             className="w-full bg-slate-800 border border-slate-700 rounded-lg py-2 pl-10 pr-4 text-white placeholder-gray-500"
           />
           <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>

@@ -16,9 +16,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onNavigate }) => {
                 <SparklesIcon className="w-20 h-20 text-white" />
             </div>
         </div>
-        <h1 className="text-4xl font-bold text-white mb-4">Welcome to ConsultAI</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Bem-vindo ao ConsultAI</h1>
         <p className="text-lg text-gray-300 max-w-sm">
-          Your personal AI business consultant, ready to help you strategize and succeed.
+          Seu consultor de negócios pessoal com IA, pronto para ajudar você a traçar estratégias e ter sucesso.
         </p>
       </div>
       
@@ -33,10 +33,10 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onNavigate }) => {
           onClick={onNavigate}
           className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-4 rounded-xl text-lg transition-transform transform active:scale-95 shadow-lg shadow-cyan-500/20"
         >
-          Create Your Persona
+          Criar sua Persona
         </button>
         <p className="mt-4 text-gray-400">
-          Already have an account? <a href="#" className="font-semibold text-cyan-400">Log in</a>
+          Já tem uma conta? <a href="#" className="font-semibold text-cyan-400">Entrar</a>
         </p>
       </div>
     </div>

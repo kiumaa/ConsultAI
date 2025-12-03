@@ -1,6 +1,6 @@
 {
   "name": "ConsultAI",
-  "description": "Your personal AI business consultant, ready to help you strategize and succeed through real-time voice conversations.",
+  "description": "Seu consultor de negócios pessoal com IA, pronto para ajudar você a traçar estratégias e ter sucesso por meio de conversas de voz em tempo real.",
   "requestFramePermissions": [
     "microphone"
   ]

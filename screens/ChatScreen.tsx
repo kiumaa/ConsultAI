@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { GoogleGenAI, LiveSession, LiveServerMessage, Modality } from '@google/genai';
 import { Screen, Consultant, Message } from '../types';
@@ -14,7 +15,7 @@ type AIState = 'idle' | 'listening' | 'thinking' | 'speaking';
 
 const ChatScreen: React.FC<ChatScreenProps> = ({ consultant, onNavigate }) => {
   const [messages, setMessages] = useState<Message[]>([
-    { id: 'initial', text: `Hello! I'm your ${consultant.name}. How can I help you with your business today?`, sender: 'ai' },
+    { id: 'initial', text: `Olá! Sou o seu ${consultant.name}. Como posso ajudar com o seu negócio hoje?`, sender: 'ai' },
   ]);
   const [isRecording, setIsRecording] = useState(false);
   const [aiState, setAiState] = useState<AIState>('idle');
@@ -205,10 +206,10 @@ const ChatScreen: React.FC<ChatScreenProps> = ({ consultant, onNavigate }) => {
   
   const getAiStateText = () => {
     switch(aiState) {
-        case 'listening': return 'Listening...';
-        case 'thinking': return 'Thinking...';
-        case 'speaking': return 'Speaking...';
-        default: return 'Tap to start';
+        case 'listening': return 'Ouvindo...';
+        case 'thinking': return 'Pensando...';
+        case 'speaking': return 'Falando...';
+        default: return 'Toque para iniciar';
     }
   };
 
@@ -219,8 +220,8 @@ const ChatScreen: React.FC<ChatScreenProps> = ({ consultant, onNavigate }) => {
                 <div className="absolute top-0 left-0 h-full w-2/3 max-w-xs bg-slate-800 p-6 shadow-2xl" onClick={e => e.stopPropagation()}>
                    <h2 className="text-xl font-bold mb-8 text-white">ConsultAI</h2>
                    <nav className="flex flex-col space-y-4">
-                       <button onClick={() => { onNavigate(Screen.Journal); setIsMenuOpen(false); }} className="text-left text-gray-300 hover:text-white text-lg">Business Journal</button>
-                       <button onClick={() => { onNavigate(Screen.ActionItems); setIsMenuOpen(false); }} className="text-left text-gray-300 hover:text-white text-lg">Action Items</button>
+                       <button onClick={() => { onNavigate(Screen.Journal); setIsMenuOpen(false); }} className="text-left text-gray-300 hover:text-white text-lg">Diário de Negócios</button>
+                       <button onClick={() => { onNavigate(Screen.ActionItems); setIsMenuOpen(false); }} className="text-left text-gray-300 hover:text-white text-lg">Itens de Ação</button>
                    </nav>
                 </div>
             </div>
